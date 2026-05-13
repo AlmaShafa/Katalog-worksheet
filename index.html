@@ -191,5 +191,24 @@
         </div>
     </footer>
 
+    <script>
+        // Fungsi untuk toggle audio (play/pause)
+        function toggleAudio() {
+            const audio = document.getElementById('bgMusic');
+            const button = document.getElementById('audioToggle');
+            
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log('Audio playback failed:', error);
+                    alert('Musik tidak bisa diputar. Pastikan file musik ada di folder yang benar.');
+                });
+                button.style.background = 'rgba(236, 72, 153, 0.2)'; // pink tint when playing
+            } else {
+                audio.pause();
+                button.style.background = 'white';
+            }
+        }
+    </script>
+
 </body>
 </html>
