@@ -16,11 +16,19 @@
 </head>
 <body class="bg-pink-50 text-slate-800">
 
-    <!-- Audio Player (Fixed di Sudut Kanan Bawah) -->
-    <div class="fixed bottom-6 right-6 bg-white rounded-full shadow-2xl p-4 z-50 hover:shadow-3xl transition duration-300 border-2 border-pink-200">
-        <audio controls class="w-72" controlsList="nodownload">
+        <!-- Audio Player dengan Button On/Mute -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <audio id="bgMusic" loop>
             <source src="music/indo hebat.mp3" type="audio/mpeg">
         </audio>
+        <button id="audioToggle" 
+                class="bg-white rounded-full shadow-2xl p-4 hover:shadow-3xl transition duration-300 border-2 border-pink-200 hover:bg-pink-100"
+                onclick="toggleAudio()">
+            <svg id="soundIcon" class="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                <!-- Speaker On Icon -->
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.3-2.5-4.04v8.08c1.48-.74 2.5-2.27 2.5-4.04z"></path>
+            </svg>
+        </button>
     </div>
     
     <!-- Section 1: Hero -->
